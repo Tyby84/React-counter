@@ -4,11 +4,7 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
-    if (action.type === 'INCREMENT') {
-        return {
-            counter: state.counter + 1
-        }
-    }
+    
 	switch(action.type) {
 		case 'INCREMENT' : 
 			const newState = Object.assign({}, state);
