@@ -36,6 +36,13 @@ const reducer = (state = initialState, action) => {
 				results: state.results.concat({id: new Date(), val:state.counter})
 			}
 			break;
+		case 'DEL_RESULT' :
+		
+		const updatedArray = state.results.filter(result => result.id !== action.resultElId);
+			return {
+				...state,
+				results: updatedArray
+			}
 		default: 
 			return state;
 	}
